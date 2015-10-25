@@ -1,0 +1,16 @@
+[
+{
+  "modid": "lom",
+  "name": "LotsOMobs",
+  "description": "LotsOMobs, a mod that adds so much more than mobs!",
+  "version": "1.8-1.2",
+  "mcversion": "1.8",
+  "url": "http://www.LarsMods.com/",
+  "updateUrl": "",
+  "authors": "TheLarsinator",
+  "credits": "",
+  "logoFile": "LotsOMobsLogo.png",
+  "screenshots": [],
+  "dependencies": []
+}
+]

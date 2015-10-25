@@ -1,0 +1,42 @@
+//Materials
+item.Horn.name=Horn
+item.DeerHide.name=Deer Hide
+item.SmashedBug.name=Smashed Bug
+
+//Food
+item.Venison.name=Cooked Venison
+item.RawVenison.name=Raw Venison
+item.BoarMeat.name=Cooked Boar
+item.RawBoar.name=Raw Boar
+item.LizardMeat.name=Cooked Lizard
+item.RawLizard.name=Raw Lizard
+item.WhaleMeat.name=Cooked Whale
+item.RawWhale.name=Raw Whale
+
+//Weapons
+item.HornSword.name=Horn Sword
+
+//Armor
+item.DeerHideHelmet.name=Deer Hide Helmet
+item.DeerHideChestPlate.name=Deer Hide Chestplate
+item.DeerHideLeggings.name=Deer Hide Leggings
+item.DeerHideBoots.name=Deer Hide Boots
+
+//Mobs
+entity.lom_Deer.name=Deer
+entity.lom_Boar.name=Boar
+entity.lom_Squirrel.name=Squirrel
+entity.lom_Lizard.name=Lizard
+entity.lom_Gekko.name=Gekko
+entity.lom_Ant.name=Ant
+entity.lom_Mole.name=Mole
+entity.lom_Whale.name=Whale
+entity.lom_Fish.name=Fish
+entity.lom_BigFish.name=Big Fish
+entity.lom_Elephant.name=Elephant
+
+
+//CreativeTabs
+itemGroup.LotsOMobsItems=LotsOMobs Items
+itemGroup.LotsOMobsFood=LotsOMobs Food
+itemGroup.LotsOMobsCombat=LotsOMobs Combat Items
