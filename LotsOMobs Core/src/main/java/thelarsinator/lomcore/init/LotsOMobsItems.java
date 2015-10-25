@@ -31,6 +31,8 @@ public class LotsOMobsItems
 		public static Item RawReptile;
 		public static Item WhaleMeat;
 		public static Item RawWhale;
+		public static Item CamelMeat;
+		public static Item RawCamel;
 		
 		public static Item HornSword;
 
@@ -55,6 +57,8 @@ public class LotsOMobsItems
 		RawReptile = new ItemLOMFood(3, 2, false).setUnlocalizedName("RawReptile");
 		WhaleMeat = new ItemLOMFood(1, 0, true).setUnlocalizedName("WhaleMeat");
 		RawWhale = new ItemLOMFood(3, 2, false).setUnlocalizedName("RawWhale");
+		CamelMeat = new ItemLOMFood(1, 0, true).setUnlocalizedName("CamelMeat");
+		RawCamel = new ItemLOMFood(3, 2, false).setUnlocalizedName("RawCamel");
 		
 		//Weapons
 		HornSword = new ItemSword(LotsOMobs.EnumToolMaterialHorn).setUnlocalizedName("HornSword").setCreativeTab(LotsOMobs.LotsOMobsCombatTab);
@@ -78,6 +82,8 @@ public class LotsOMobsItems
 		registerItemAndTexture(RawReptile, "RawReptile");
 		registerItemAndTexture(WhaleMeat, "WhaleMeat");
 		registerItemAndTexture(RawWhale, "RawWhale");
+		registerItemAndTexture(CamelMeat, "CamelMeat");
+		registerItemAndTexture(RawCamel, "RawCamel");
 		
 		registerItemAndTexture(HornSword, "HornSword");
 		

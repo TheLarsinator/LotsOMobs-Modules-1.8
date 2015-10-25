@@ -71,6 +71,7 @@ public class ConfigHandler
 	public static boolean MoleOn = true;
 	public static boolean BisonOn = true;
 	public static boolean AmmoniteOn = true;
+	public static boolean FennecOn = true;
 
 	
 	//Spawn Rates
@@ -120,6 +121,7 @@ public class ConfigHandler
 	public static float SaberToothRate = 1.0F;
 	public static float MuskOxRate = 1.4F;
 	public static float CamelRate = 2.4F;
+	public static float FennecRate = 2.9F;
 	public static float GazelleRate = 2.4F;
 	public static float SharkRate = 3F;
 	public static float CrabRate = 3F;
@@ -166,6 +168,7 @@ public class ConfigHandler
 		NarwalOn = config.getBoolean("Narwhale", "mobs", NarwalOn, "Turn the Narwhale on/off");
 		FishyOn = config.getBoolean("Fishy", "mobs", FishyOn, "Turn the Fishy on/off");
 		CamelOn = config.getBoolean("Camel", "mobs", CamelOn, "Turn the Camel on/off");
+		FennecOn = config.getBoolean("Fennec", "mobs", FennecOn, "Turn the Fennec on/off");
 		BirdOn = config.getBoolean("Bird", "mobs", BirdOn, "Turn the Bird on/off");		
 		
 		PenguinOn = config.getBoolean("Penguin", "mobs", PenguinOn, "Turn the Penguin on/off");
@@ -231,6 +234,7 @@ public class ConfigHandler
 		BearRate = config.getFloat("Bear spawn rate", "spawn", BearRate, -1, 10, "Set Bear spawn rate");
 		GorillaRate = config.getFloat("Gorilla spawn rate", "spawn", GorillaRate, -1, 10, "Set Gorilla spawn rate");
 		CamelRate = config.getFloat("Camel spawn rate", "spawn", CamelRate, -1, 10, "Set Camel spawn rate");
+		FennecRate = config.getFloat("Fennec spawn rate", "spawn", FennecRate, -1, 10, "Set Fennec spawn rate");
 		SnakeRate = config.getFloat("Snake spawn rate", "spawn", SnakeRate, -1, 10, "Set Snake spawn rate");
 		ButterFlyRate = config.getFloat("ButterFly spawn rate", "spawn", ButterFlyRate, -1, 10, "Set ButterFly spawn rate");
 		AntRate = config.getFloat("Ant spawn rate", "spawn", AntRate, -1, 10, "Set Ant spawn rate");
