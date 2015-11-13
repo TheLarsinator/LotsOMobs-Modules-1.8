@@ -34,6 +34,7 @@ entity.lom_Whale.name=Whale
 entity.lom_Fish.name=Fish
 entity.lom_BigFish.name=Big Fish
 entity.lom_Elephant.name=Elephant
+entity.lom_Scorpion.name=Scorpion
 
 
 //CreativeTabs

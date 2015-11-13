@@ -1,4 +1,4 @@
-package thelarsinator.lomforrestandplains.render;
+package thelarsinator.lomjungleandswamps.render;
 
 import org.lwjgl.opengl.GL11;
 
@@ -12,7 +12,7 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import thelarsinator.lomcore.core.LotsOMobs;
-import thelarsinator.lomforrestandplains.entity.EntityGekko;
+import thelarsinator.lomjungleandswamps.entity.EntityGekko;
 
 @SideOnly(Side.CLIENT)
 public class RenderGekko extends RenderLiving

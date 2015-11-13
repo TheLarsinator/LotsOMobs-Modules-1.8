@@ -74,15 +74,6 @@ public class EntityMole extends EntityAnimal
     	{
     		worldObj.setBlockState(position, Blocks.dirt.getDefaultState());
     	}
-        	/*if(worldObj.getBlock((int)this.posX, (int)this.posY - 1, (int)this.posZ) == Blocks.grass)
-        	{
-        		worldObj.setBlock((int)this.posX, (int)this.posY - 1, (int)this.posZ, Blocks.dirt);
-        	}
-        	
-        	if(worldObj.getBlock((int)this.posX, (int)this.posY, (int)this.posZ) instanceof BlockCrops && new Random().nextInt(30) == 1)
-        	{
-        		worldObj.setBlockToAir((int)this.posX, (int)this.posY, (int)this.posZ);
-        	}*/
     }
 
 	protected void func_110147_ax()

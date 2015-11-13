@@ -1,10 +1,6 @@
 package thelarsinator.lomforrestandplains.init;
 
 import net.minecraft.entity.EnumCreatureType;
-import net.minecraft.entity.passive.EntityCow;
-import net.minecraft.entity.passive.EntityHorse;
-import net.minecraft.entity.passive.EntityPig;
-import net.minecraft.entity.passive.EntitySheep;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraftforge.common.BiomeDictionary;
 import net.minecraftforge.common.BiomeDictionary.Type;
@@ -15,7 +11,6 @@ import thelarsinator.lomforrestandplains.entity.EntityBoar;
 import thelarsinator.lomforrestandplains.entity.EntityDeer;
 import thelarsinator.lomforrestandplains.entity.EntityDirtPile;
 import thelarsinator.lomforrestandplains.entity.EntityElephant;
-import thelarsinator.lomforrestandplains.entity.EntityGekko;
 import thelarsinator.lomforrestandplains.entity.EntityMole;
 import thelarsinator.lomforrestandplains.entity.EntitySquirrel;
 
@@ -54,12 +49,6 @@ public class LotsOMobsForrestAndPlainsMobs
 	    	EntityRegistry.registerGlobalEntityID(EntityAnt.class, mobid + "Ant", EntityRegistry.findGlobalUniqueEntityId(), 0x000000, 0xFF0000);
 	     	EntityRegistry.addSpawn(EntityAnt.class, (int)(ConfigHandler.AntRate *10), 15, 20, EnumCreatureType.CREATURE, new BiomeGenBase[] {BiomeGenBase.forest});
 	        EntityRegistry.addSpawn(EntityAnt.class, (int)(ConfigHandler.AntRate *10), 1, 4, EnumCreatureType.CREATURE, BiomeDictionary.getBiomesForType(Type.PLAINS));
-		}
-		if(ConfigHandler.GekkoOn == true)
-		{
-	    	EntityRegistry.registerGlobalEntityID(EntityGekko.class,   mobid + "Gekko", EntityRegistry.findGlobalUniqueEntityId(), 0xDEC2A2, 0x506E21);
-	    	EntityRegistry.addSpawn(EntityGekko.class,  (int)(ConfigHandler.GekkoRate *10),  4,  5,  EnumCreatureType.CREATURE, new BiomeGenBase[] {BiomeGenBase.swampland});
-        	EntityRegistry.addSpawn(EntityGekko.class, (int)(ConfigHandler.GekkoRate *10), 1, 4, EnumCreatureType.CREATURE, BiomeDictionary.getBiomesForType(Type.SWAMP));
 		}
 		if(ConfigHandler.MoleOn == true)
 		{	

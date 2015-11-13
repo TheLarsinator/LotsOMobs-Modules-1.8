@@ -1,4 +1,4 @@
-package thelarsinator.lomforrestandplains.entity;
+package thelarsinator.lomjungleandswamps.entity;
 
 import net.minecraft.entity.EntityAgeable;
 import net.minecraft.entity.SharedMonsterAttributes;

@@ -8,7 +8,7 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import thelarsinator.lomdeserts.init.LotsOMobsDesertsMobs;
 import thelarsinator.lomdeserts.init.LotsOMobsDesertsRecipes;
 
-@Mod (modid = "lomdes", name = "LotsOMobsDeserts", version = "1.8-1.0", dependencies = "required-after:lom")
+@Mod (modid = "lomdes", name = "LotsOMobsDeserts", version = "1.8-1.1", dependencies = "required-after:lom")
 public class LotsOMobsDeserts
 {
 	public static String modid = "lomdes";	

@@ -82,9 +82,6 @@ public class RenderMole extends RenderLiving
     	float f = 1.0F;
         GL11.glScalef(f, f, f);
     	BlockPos position = new BlockPos(Mole.posX, Mole.posY-1, Mole.posZ);
-
-	 	System.out.println(Mole.worldObj.getBlockState(position).toString());
-
     }
     
     

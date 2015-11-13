@@ -15,7 +15,7 @@ import thelarsinator.lomcore.creativetabs.LotsOMobsFoodTab;
 import thelarsinator.lomcore.creativetabs.LotsOMobsItemsTab;
 import thelarsinator.lomcore.init.LotsOMobsItems;
 
-@Mod (modid = "lom", name = "LotsOMobsCore", version = "1.8-1.1", guiFactory = "thelarsinator.lomcore.core.LotsOMobsGUIFactory")
+@Mod (modid = "lom", name = "LotsOMobsCore", version = "1.8-1.2", guiFactory = "thelarsinator.lomcore.core.LotsOMobsGUIFactory")
 /**100.000 downloads!!!
  * http://prntscr.com/1hz9gd
  * http://prntscr.com/1hzais

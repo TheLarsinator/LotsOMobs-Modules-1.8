@@ -7,8 +7,8 @@ import net.minecraftforge.common.BiomeDictionary.Type;
 import net.minecraftforge.fml.common.registry.EntityRegistry;
 import thelarsinator.lomcore.core.handler.ConfigHandler;
 import thelarsinator.lomdeserts.entity.EntityCamel;
-import thelarsinator.lomdeserts.entity.EntityFennec;
 import thelarsinator.lomdeserts.entity.EntityLizard;
+import thelarsinator.lomdeserts.entity.EntityScorpion;
 
 public class LotsOMobsDesertsMobs 
 {
@@ -27,6 +27,12 @@ public class LotsOMobsDesertsMobs
 			EntityRegistry.registerGlobalEntityID(EntityCamel.class, mobid + "Camel", EntityRegistry.findGlobalUniqueEntityId(),  0xFADFCD, 0xF5C9AB);
 	    	EntityRegistry.addSpawn(EntityCamel.class,  (int)(ConfigHandler.CamelRate *10),  4,  5,  EnumCreatureType.CREATURE, new BiomeGenBase[] {BiomeGenBase.desert, BiomeGenBase.desertHills, BiomeGenBase.mesa});
 	        EntityRegistry.addSpawn(EntityCamel.class, (int)(ConfigHandler.CamelRate *10), 1, 4, EnumCreatureType.CREATURE, BiomeDictionary.getBiomesForType(Type.SANDY));
+		}
+		if(ConfigHandler.ScorpionOn == true)
+		{
+			EntityRegistry.registerGlobalEntityID(EntityScorpion.class, mobid + "Scorpion", EntityRegistry.findGlobalUniqueEntityId(),  0xbd7a36, 0x645746);
+	    	EntityRegistry.addSpawn(EntityScorpion.class,  (int)(ConfigHandler.ScorpionRate *10),  4,  5,  EnumCreatureType.CREATURE, new BiomeGenBase[] {BiomeGenBase.desert, BiomeGenBase.desertHills, BiomeGenBase.mesa});
+	        EntityRegistry.addSpawn(EntityScorpion.class, (int)(ConfigHandler.ScorpionRate *10), 1, 4, EnumCreatureType.CREATURE, BiomeDictionary.getBiomesForType(Type.SANDY));
 		}
 		/*if(ConfigHandler.FennecOn == true)
 		{
