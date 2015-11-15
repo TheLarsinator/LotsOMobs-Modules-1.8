@@ -1,13 +1,13 @@
 package thelarsinator.lomjungleandswamps.entity;
 
 import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityLiving;
+import net.minecraft.entity.EntityCreature;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.IEntityLivingData;
 import net.minecraft.entity.SharedMonsterAttributes;
+import net.minecraft.entity.ai.EntityAIAttackOnCollide;
 import net.minecraft.entity.ai.EntityAIBase;
-import net.minecraft.entity.ai.EntityAIFindEntityNearest;
-import net.minecraft.entity.ai.EntityAIFindEntityNearestPlayer;
+import net.minecraft.entity.ai.EntityAINearestAttackableTarget;
 import net.minecraft.entity.ai.EntityMoveHelper;
 import net.minecraft.entity.monster.EntityIronGolem;
 import net.minecraft.entity.monster.IMob;
@@ -26,7 +26,7 @@ import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.chunk.Chunk;
 
-public class EntityFrog extends EntityLiving implements IMob
+public class EntityFrog extends EntityCreature implements IMob
 {
     public float squishAmount;
     public float squishFactor;
@@ -42,8 +42,11 @@ public class EntityFrog extends EntityLiving implements IMob
         this.tasks.addTask(1, new EntityFrog.AISlimeFloat());
         this.tasks.addTask(3, new EntityFrog.AISlimeFaceRandom());
         this.tasks.addTask(5, new EntityFrog.AISlimeHop());
+        this.tasks.addTask(4, new EntityAIAttackOnCollide(this, EntityFly.class, 1.0D, false));
+        this.targetTasks.addTask(2, new EntityAINearestAttackableTarget(this, EntityFly.class, true));
         this.textureID = rand.nextInt(4);
         this.size = rand.nextInt(6);
+
     }
 
     protected void entityInit()
