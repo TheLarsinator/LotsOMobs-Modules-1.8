@@ -8,10 +8,11 @@ item.Venison.name=Cooked Venison
 item.RawVenison.name=Raw Venison
 item.BoarMeat.name=Cooked Boar
 item.RawBoar.name=Raw Boar
-item.LizardMeat.name=Cooked Lizard
-item.RawLizard.name=Raw Lizard
+item.ReptileMeat.name=Cooked Reptile
+item.RawReptile.name=Raw Reptile
 item.WhaleMeat.name=Cooked Whale
 item.RawWhale.name=Raw Whale
+
 
 //Weapons
 item.HornSword.name=Horn Sword
@@ -35,6 +36,9 @@ entity.lom_Fish.name=Fish
 entity.lom_BigFish.name=Big Fish
 entity.lom_Elephant.name=Elephant
 entity.lom_Scorpion.name=Scorpion
+entity.lom_Fly.name=Fly
+entity.lom_Croco.name=Crocodile
+entity.lom_Frog.name=Frog
 
 
 //CreativeTabs
