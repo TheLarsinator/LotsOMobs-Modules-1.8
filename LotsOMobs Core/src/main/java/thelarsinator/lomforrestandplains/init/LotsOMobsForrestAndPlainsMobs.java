@@ -12,6 +12,7 @@ import thelarsinator.lomforrestandplains.entity.EntityBoar;
 import thelarsinator.lomforrestandplains.entity.EntityDeer;
 import thelarsinator.lomforrestandplains.entity.EntityDirtPile;
 import thelarsinator.lomforrestandplains.entity.EntityElephant;
+import thelarsinator.lomforrestandplains.entity.EntityFox;
 import thelarsinator.lomforrestandplains.entity.EntityMole;
 import thelarsinator.lomforrestandplains.entity.EntitySquirrel;
 
@@ -69,6 +70,12 @@ public class LotsOMobsForrestAndPlainsMobs
 			EntityRegistry.registerGlobalEntityID(EntityElephant.class, mobid + "Elephant", EntityRegistry.findGlobalUniqueEntityId(), 0x919191, 0x757575);
 		    EntityRegistry.addSpawn(EntityElephant.class, (int)ConfigHandler.ElephantRate *10, 1, 4, EnumCreatureType.CREATURE, new BiomeGenBase[] {BiomeGenBase.savanna, BiomeGenBase.savannaPlateau});
 		    EntityRegistry.addSpawn(EntityElephant.class, (int)ConfigHandler.ElephantRate *10, 1, 4, EnumCreatureType.CREATURE, BiomeDictionary.getBiomesForType(Type.SAVANNA));
+		}
+		if(ConfigHandler.FoxOn == true)
+		{	
+			EntityRegistry.registerGlobalEntityID(EntityFox.class, mobid + "Fox", EntityRegistry.findGlobalUniqueEntityId(), 0xc66427, 0x862d1b);
+		    EntityRegistry.addSpawn(EntityFox.class, (int)ConfigHandler.FoxRate *10, 1, 4, EnumCreatureType.CREATURE, new BiomeGenBase[] {BiomeGenBase.forest, BiomeGenBase.forestHills});
+		    EntityRegistry.addSpawn(EntityFox.class, (int)ConfigHandler.FoxRate *10, 1, 4, EnumCreatureType.CREATURE, BiomeDictionary.getBiomesForType(Type.FOREST));
 		}
 	}
 }

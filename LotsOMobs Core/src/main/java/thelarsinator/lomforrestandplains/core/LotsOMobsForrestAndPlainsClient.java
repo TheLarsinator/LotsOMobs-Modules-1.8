@@ -2,6 +2,7 @@ package thelarsinator.lomforrestandplains.core;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.model.ModelBiped;
+import net.minecraft.client.model.ModelWolf;
 import net.minecraftforge.fml.client.registry.RenderingRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -11,6 +12,7 @@ import thelarsinator.lomforrestandplains.entity.EntityBoar;
 import thelarsinator.lomforrestandplains.entity.EntityDeer;
 import thelarsinator.lomforrestandplains.entity.EntityDirtPile;
 import thelarsinator.lomforrestandplains.entity.EntityElephant;
+import thelarsinator.lomforrestandplains.entity.EntityFox;
 import thelarsinator.lomforrestandplains.entity.EntityMole;
 import thelarsinator.lomforrestandplains.entity.EntitySquirrel;
 import thelarsinator.lomforrestandplains.model.ModelAnt;
@@ -28,6 +30,7 @@ import thelarsinator.lomforrestandplains.render.RenderBoar;
 import thelarsinator.lomforrestandplains.render.RenderDeer;
 import thelarsinator.lomforrestandplains.render.RenderDirtPile;
 import thelarsinator.lomforrestandplains.render.RenderElephant;
+import thelarsinator.lomforrestandplains.render.RenderFox;
 import thelarsinator.lomforrestandplains.render.RenderMole;
 import thelarsinator.lomforrestandplains.render.RenderSquirrel;
 
@@ -49,6 +52,7 @@ public class LotsOMobsForrestAndPlainsClient extends LotsOMobsForrestAndPlainsPr
 		RenderingRegistry.registerEntityRenderingHandler(EntityDirtPile.class, new RenderDirtPile(Minecraft.getMinecraft().getRenderManager(), new ModelDirtPile(), 0.0625F));
 		RenderingRegistry.registerEntityRenderingHandler(EntityElephant.class, new RenderElephant(Minecraft.getMinecraft().getRenderManager(), new ModelElephant(), 1.9F));
 		RenderingRegistry.registerEntityRenderingHandler(EntityBear.class, new RenderBear(Minecraft.getMinecraft().getRenderManager(), new ModelBear(), 1F));
+		RenderingRegistry.registerEntityRenderingHandler(EntityFox.class, new RenderFox(Minecraft.getMinecraft().getRenderManager(), new ModelWolf(), 1F));
     }
     
     public ModelBiped getArmorModel(int id)

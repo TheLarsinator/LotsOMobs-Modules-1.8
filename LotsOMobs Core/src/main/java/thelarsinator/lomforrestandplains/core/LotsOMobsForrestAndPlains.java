@@ -8,7 +8,7 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import thelarsinator.lomforrestandplains.init.LotsOMobsForrestAndPlainsMobs;
 import thelarsinator.lomforrestandplains.init.LotsOMobsForrestAndPlainsRecipes;
 
-@Mod (modid = "lomfap", name = "LotsOMobsForrestAndPlains", version = "1.8-1.1", dependencies = "required-after:lom")
+@Mod (modid = "lomfap", name = "LotsOMobsForrestAndPlains", version = "1.8-1.2", dependencies = "required-after:lom")
 public class LotsOMobsForrestAndPlains
 {
 	public static String modid = "lomfap";	

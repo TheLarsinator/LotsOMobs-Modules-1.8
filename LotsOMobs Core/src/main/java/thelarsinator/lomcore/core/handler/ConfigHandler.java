@@ -73,6 +73,8 @@ public class ConfigHandler
 	public static boolean AmmoniteOn = true;
 	public static boolean FennecOn = true;
 	public static boolean ScorpionOn = true;
+	public static boolean FoxOn = true;
+
 
 	
 	//Spawn Rates
@@ -130,6 +132,7 @@ public class ConfigHandler
 	public static float BisonRate = 3.2F;
 	public static float AmmoniteRate = 8F;
 	public static float ScorpionRate = 8F;
+	public static float FoxRate = 8F;
 
 	
 	//Dimension IDs
@@ -142,6 +145,7 @@ public class ConfigHandler
 	public static int DinoTerrainID = 42;
 	public static int IceAgeTerrainID = 46;
 	public static int TropicBeachID = 55;
+
 
 
 
@@ -222,6 +226,7 @@ public class ConfigHandler
 		BisonOn = config.getBoolean("Bison", "mobs", BisonOn, "Turn the Bison on/off");	
 		AmmoniteOn = config.getBoolean("Ammonite", "mobs", AmmoniteOn, "Turn the Ammonite on/off");	
 		ScorpionOn = config.getBoolean("Scorpion", "mobs", ScorpionOn, "Turn the Scorpion on/off");	
+		FoxOn = config.getBoolean("Fox", "mobs", FoxOn, "Turn the Fox on/off");	
 
 		DeerRate = config.getFloat("Deer spawn rate", "spawn", DeerRate, -1, 10, "Set Deer spawn rate");
 		BoarRate = config.getFloat("Boar spawn rate", "spawn", BoarRate, -1, 10, "Set Boar spawn rate");
@@ -277,6 +282,7 @@ public class ConfigHandler
 		BisonRate = config.getFloat("Bison spawn rate", "spawn", BisonRate, -1, 10, "Set Bison spawn rate");
 		AmmoniteRate = config.getFloat("Ammonite spawn rate", "spawn", AmmoniteRate, -1, 10, "Set Ammonite spawn rate");
 		ScorpionRate = config.getFloat("Scorpion spawn rate", "spawn", ScorpionRate, -1, 10, "Set Scorpion spawn rate");
+		FoxRate = config.getFloat("Fox spawn rate", "spawn", FoxRate, -1, 10, "Set Fox spawn rate");
 
 		AntarticaID = config.getInt("AntarticaID", "biome", AntarticaID, 0, Integer.MAX_VALUE, "Antartica ID");
 		ArcticOceanID = config.getInt("ArcticOceanID", "biome", ArcticOceanID, 0, Integer.MAX_VALUE, "ArcticOcean ID");

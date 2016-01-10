@@ -39,6 +39,10 @@ entity.lom_Scorpion.name=Scorpion
 entity.lom_Fly.name=Fly
 entity.lom_Croco.name=Crocodile
 entity.lom_Frog.name=Frog
+entity.lom_Bear.name=Bear
+entity.lom_PolarBear.name=Polar Bear
+entity.lom_PolarFox.name=Polar Fox
+entity.lom_Fox.name=Fox
 
 
 //CreativeTabs
