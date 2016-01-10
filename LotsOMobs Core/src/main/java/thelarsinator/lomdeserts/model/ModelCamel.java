@@ -3,6 +3,7 @@ package thelarsinator.lomdeserts.model;
 import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.model.ModelRenderer;
 import net.minecraft.entity.Entity;
+import net.minecraft.util.MathHelper;
 
 /**
  * camel.tcn - TechneToTabulaImporter
@@ -80,7 +81,9 @@ public class ModelCamel extends ModelBase {
     }
 
     @Override
-    public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) { 
+    public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
+        setRotationAngles(f, f1, f2, f3, f4, f5);
+
         this.Leg1.render(f5);
         this.BultVB.render(f5);
         this.Nose2.render(f5);
@@ -105,5 +108,14 @@ public class ModelCamel extends ModelBase {
         modelRenderer.rotateAngleX = x;
         modelRenderer.rotateAngleY = y;
         modelRenderer.rotateAngleZ = z;
+    }
+    
+    public void setRotationAngles(float f, float f1, float f2, float f3, float f4, float f5)
+    {
+      super.setRotationAngles(f, f1, f2, f3, f4, f5, null);
+      this.Leg1.rotateAngleX = MathHelper.cos(f * 0.6662F) * 1.4F * f1;
+      this.Leg2.rotateAngleX = MathHelper.cos(f * 0.6662F + (float)Math.PI) * 1.4F * f1;
+      this.Leg3.rotateAngleX = MathHelper.cos(f * 0.6662F + (float)Math.PI) * 1.4F * f1;
+      this.Leg4.rotateAngleX = MathHelper.cos(f * 0.6662F) * 1.4F * f1;
     }
 }

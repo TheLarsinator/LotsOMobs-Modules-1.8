@@ -6,6 +6,7 @@ import net.minecraftforge.fml.client.registry.RenderingRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import thelarsinator.lomforrestandplains.entity.EntityAnt;
+import thelarsinator.lomforrestandplains.entity.EntityBear;
 import thelarsinator.lomforrestandplains.entity.EntityBoar;
 import thelarsinator.lomforrestandplains.entity.EntityDeer;
 import thelarsinator.lomforrestandplains.entity.EntityDirtPile;
@@ -13,6 +14,7 @@ import thelarsinator.lomforrestandplains.entity.EntityElephant;
 import thelarsinator.lomforrestandplains.entity.EntityMole;
 import thelarsinator.lomforrestandplains.entity.EntitySquirrel;
 import thelarsinator.lomforrestandplains.model.ModelAnt;
+import thelarsinator.lomforrestandplains.model.ModelBear;
 import thelarsinator.lomforrestandplains.model.ModelBoar;
 import thelarsinator.lomforrestandplains.model.ModelDeer;
 import thelarsinator.lomforrestandplains.model.ModelDirtPile;
@@ -21,6 +23,7 @@ import thelarsinator.lomforrestandplains.model.ModelMole;
 import thelarsinator.lomforrestandplains.model.ModelSquirrel;
 import thelarsinator.lomforrestandplains.model.armor.ModelDeerArmor;
 import thelarsinator.lomforrestandplains.render.RenderAnt;
+import thelarsinator.lomforrestandplains.render.RenderBear;
 import thelarsinator.lomforrestandplains.render.RenderBoar;
 import thelarsinator.lomforrestandplains.render.RenderDeer;
 import thelarsinator.lomforrestandplains.render.RenderDirtPile;
@@ -45,6 +48,7 @@ public class LotsOMobsForrestAndPlainsClient extends LotsOMobsForrestAndPlainsPr
 		RenderingRegistry.registerEntityRenderingHandler(EntityMole.class, new RenderMole(Minecraft.getMinecraft().getRenderManager(), new ModelMole(), 0.2F));
 		RenderingRegistry.registerEntityRenderingHandler(EntityDirtPile.class, new RenderDirtPile(Minecraft.getMinecraft().getRenderManager(), new ModelDirtPile(), 0.0625F));
 		RenderingRegistry.registerEntityRenderingHandler(EntityElephant.class, new RenderElephant(Minecraft.getMinecraft().getRenderManager(), new ModelElephant(), 1.9F));
+		RenderingRegistry.registerEntityRenderingHandler(EntityBear.class, new RenderBear(Minecraft.getMinecraft().getRenderManager(), new ModelBear(), 1F));
     }
     
     public ModelBiped getArmorModel(int id)

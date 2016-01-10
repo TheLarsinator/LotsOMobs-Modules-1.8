@@ -1,53 +1,45 @@
-  package thelarsinator.lomjungleandswamps.entity;
-
-import java.util.Random;
+package thelarsinator.lomforrestandplains.entity;
 
 import net.minecraft.block.Block;
-import net.minecraft.block.BlockSilverfish;
-import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.EnumCreatureAttribute;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.EntityAIAttackOnCollide;
-import net.minecraft.entity.ai.EntityAIBase;
-import net.minecraft.entity.ai.EntityAIFollowParent;
 import net.minecraft.entity.ai.EntityAIHurtByTarget;
 import net.minecraft.entity.ai.EntityAILookIdle;
-import net.minecraft.entity.ai.EntityAIMate;
 import net.minecraft.entity.ai.EntityAINearestAttackableTarget;
-import net.minecraft.entity.ai.EntityAIPanic;
 import net.minecraft.entity.ai.EntityAISwimming;
-import net.minecraft.entity.ai.EntityAITempt;
 import net.minecraft.entity.ai.EntityAIWander;
 import net.minecraft.entity.ai.EntityAIWatchClosest;
 import net.minecraft.entity.monster.EntityMob;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.init.Blocks;
-import net.minecraft.init.Items;
 import net.minecraft.item.Item;
-import net.minecraft.pathfinding.PathNavigateGround;
+import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.BlockPos;
-import net.minecraft.util.DamageSource;
-import net.minecraft.util.EntityDamageSource;
-import net.minecraft.util.EnumFacing;
+import net.minecraft.util.EnumParticleTypes;
 import net.minecraft.world.World;
-import thelarsinator.lomcore.init.LotsOMobsItems;
 
-public class EntityCroco extends EntityMob
+public class EntityBear extends EntityMob
 {
-    public EntityCroco(World worldIn)
+    private int lifetime = 0;
+    private boolean playerSpawned = false;
+    private static final String __OBFID = "CL_00002219";
+
+    public EntityBear(World worldIn)
     {
         super(worldIn);
-        this.setSize(0.4F, 0.3F);
-        ((PathNavigateGround)this.getNavigator()).func_179690_a(true);
-        float var2 = 0.7F;
-        this.tasks.addTask(0, new EntityAISwimming(this));
-        this.tasks.addTask(1, new EntityAIPanic(this, 0.38F));
-        this.tasks.addTask(6, new EntityAIWander(this, var2));
-        this.tasks.addTask(7, new EntityAIWatchClosest(this, EntityPlayer.class, 6.0F));
+        this.experienceValue = 6;
+        this.setSize(1.2F, 1F);
+        this.tasks.addTask(1, new EntityAISwimming(this));
+        this.tasks.addTask(2, new EntityAIAttackOnCollide(this, EntityPlayer.class, 1.0D, false));
+        this.tasks.addTask(2, new EntityAIAttackOnCollide(this, EntityDeer.class, 1.0D, false));
+        this.tasks.addTask(2, new EntityAIAttackOnCollide(this, EntityBoar.class, 1.0D, false));
+        this.tasks.addTask(2, new EntityAIWander(this, 1.0D));
+        this.tasks.addTask(7, new EntityAIWatchClosest(this, EntityPlayer.class, 8.0F));
         this.tasks.addTask(8, new EntityAILookIdle(this));
-        this.tasks.addTask(4, new EntityAIAttackOnCollide(this, EntityPlayer.class, 1.0D, false));
         this.targetTasks.addTask(1, new EntityAIHurtByTarget(this, true, new Class[0]));
         this.targetTasks.addTask(2, new EntityAINearestAttackableTarget(this, EntityPlayer.class, true));
+        this.targetTasks.addTask(2, new EntityAINearestAttackableTarget(this, EntityDeer.class, true));
+        this.targetTasks.addTask(2, new EntityAINearestAttackableTarget(this, EntityBoar.class, true));
     }
 
     public float getEyeHeight()
@@ -58,7 +50,7 @@ public class EntityCroco extends EntityMob
     protected void applyEntityAttributes()
     {
         super.applyEntityAttributes();
-        this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(15.0D);
+        this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(21.0D);
         this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(0.25D);
         this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setBaseValue(5.0D);
     }
@@ -77,7 +69,7 @@ public class EntityCroco extends EntityMob
      */
     protected String getLivingSound()
     {
-        return null;
+        return "lom:bear";
     }
 
     /**
@@ -85,7 +77,7 @@ public class EntityCroco extends EntityMob
      */
     protected String getHurtSound()
     {
-        return null;
+        return "lom:bear";
     }
 
     /**
@@ -93,17 +85,12 @@ public class EntityCroco extends EntityMob
      */
     protected String getDeathSound()
     {
-        return null;
-    }
-
-    protected void playStepSound(BlockPos p_180429_1_, Block p_180429_2_)
-    {
-        this.playSound("mob.silverfish.step", 0.15F, 1.0F);
+        return "lom:bear";
     }
 
     protected Item getDropItem()
     {
-        return LotsOMobsItems.ReptileMeat;
+        return null;
     }
 
     /**
@@ -115,9 +102,15 @@ public class EntityCroco extends EntityMob
         super.onUpdate();
     }
 
-    public float func_180484_a(BlockPos p_180484_1_)
+
+    /**
+     * Called frequently so the entity can update its state every tick as required. For example, zombies and skeletons
+     * use this to react to sunlight and start to burn.
+     */
+    public void onLivingUpdate()
     {
-        return this.worldObj.getBlockState(p_180484_1_.down()).getBlock() == Blocks.stone ? 10.0F : super.func_180484_a(p_180484_1_);
+        super.onLivingUpdate();
+
     }
 
     /**
@@ -153,6 +146,6 @@ public class EntityCroco extends EntityMob
     }
 
 	public float spiderScaleAmount() {
-		return 1F;
+		return 1.6F;
 	}
 }

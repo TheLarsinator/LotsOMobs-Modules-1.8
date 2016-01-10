@@ -7,6 +7,7 @@ import net.minecraftforge.common.BiomeDictionary.Type;
 import net.minecraftforge.fml.common.registry.EntityRegistry;
 import thelarsinator.lomcore.core.handler.ConfigHandler;
 import thelarsinator.lomforrestandplains.entity.EntityAnt;
+import thelarsinator.lomforrestandplains.entity.EntityBear;
 import thelarsinator.lomforrestandplains.entity.EntityBoar;
 import thelarsinator.lomforrestandplains.entity.EntityDeer;
 import thelarsinator.lomforrestandplains.entity.EntityDirtPile;
@@ -37,6 +38,12 @@ public class LotsOMobsForrestAndPlainsMobs
 			EntityRegistry.registerGlobalEntityID(EntityBoar.class, mobid + "Boar", EntityRegistry.findGlobalUniqueEntityId(), 0x7D3B0C, 0x351f0a);
 		    EntityRegistry.addSpawn(EntityBoar.class, (int)ConfigHandler.BoarRate *10, 1, 4, EnumCreatureType.CREATURE, new BiomeGenBase[] {BiomeGenBase.forest, BiomeGenBase.forestHills});
 		    EntityRegistry.addSpawn(EntityBoar.class, (int)ConfigHandler.BoarRate *10, 1, 4, EnumCreatureType.CREATURE, BiomeDictionary.getBiomesForType(Type.FOREST));
+		}
+		if(ConfigHandler.BearOn == true)
+		{	
+			EntityRegistry.registerGlobalEntityID(EntityBear.class, mobid + "Bear", EntityRegistry.findGlobalUniqueEntityId(), 0x4A2710, 0x85471D);
+		    EntityRegistry.addSpawn(EntityBear.class, (int)ConfigHandler.BearRate *10, 1, 4, EnumCreatureType.CREATURE, new BiomeGenBase[] {BiomeGenBase.forest, BiomeGenBase.forestHills});
+		    EntityRegistry.addSpawn(EntityBear.class, (int)ConfigHandler.BearRate *10, 1, 4, EnumCreatureType.CREATURE, BiomeDictionary.getBiomesForType(Type.FOREST));
 		}
 		if(ConfigHandler.SquirrelOn == true)
 		{    
