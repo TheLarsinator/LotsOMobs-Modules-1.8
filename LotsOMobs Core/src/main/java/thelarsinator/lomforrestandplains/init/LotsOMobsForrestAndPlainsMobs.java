@@ -42,8 +42,8 @@ public class LotsOMobsForrestAndPlainsMobs
 		if(ConfigHandler.BearOn == true)
 		{	
 			EntityRegistry.registerGlobalEntityID(EntityBear.class, mobid + "Bear", EntityRegistry.findGlobalUniqueEntityId(), 0x4A2710, 0x85471D);
-		    EntityRegistry.addSpawn(EntityBear.class, (int)ConfigHandler.BearRate *10, 1, 4, EnumCreatureType.CREATURE, new BiomeGenBase[] {BiomeGenBase.forest, BiomeGenBase.forestHills});
-		    EntityRegistry.addSpawn(EntityBear.class, (int)ConfigHandler.BearRate *10, 1, 4, EnumCreatureType.CREATURE, BiomeDictionary.getBiomesForType(Type.FOREST));
+		    EntityRegistry.addSpawn(EntityBear.class, (int)ConfigHandler.BearRate *10, 1, 4, EnumCreatureType.MONSTER, new BiomeGenBase[] {BiomeGenBase.forest, BiomeGenBase.forestHills});
+		    EntityRegistry.addSpawn(EntityBear.class, (int)ConfigHandler.BearRate *10, 1, 4, EnumCreatureType.MONSTER, BiomeDictionary.getBiomesForType(Type.FOREST));
 		}
 		if(ConfigHandler.SquirrelOn == true)
 		{    
