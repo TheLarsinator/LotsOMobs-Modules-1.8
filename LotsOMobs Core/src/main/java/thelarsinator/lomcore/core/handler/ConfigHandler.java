@@ -105,7 +105,7 @@ public class ConfigHandler
 	public static float BeeRate = 1.5F;
 	public static float EasterBunnyRate = 1.5F;
 	public static float NarwhaleRate = .5F;
-	public static float PenguinRate = 1.0F;
+	public static float PenguinRate = 3.0F;
 	public static float IceBearRate = 1.5F;
 	public static float VultureRate = 4.0F;
 	public static float SantaRate = .5F;
@@ -132,7 +132,7 @@ public class ConfigHandler
 	public static float BisonRate = 3.2F;
 	public static float AmmoniteRate = 8F;
 	public static float ScorpionRate = 8F;
-	public static float FoxRate = 8F;
+	public static float FoxRate = 3F;
 
 	
 	//Dimension IDs

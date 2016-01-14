@@ -29,9 +29,9 @@ public class LotsOMobsArcticMobs
 		}
 		if(ConfigHandler.PenguinOn == true)
 		{	
-			EntityRegistry.registerGlobalEntityID(EntityPenguin.class, mobid + "Penguin", EntityRegistry.findGlobalUniqueEntityId(), 0xFFFFFF, 0x000000);
-		    EntityRegistry.addSpawn(EntityPenguin.class, (int)ConfigHandler.PenguinRate *10, 2, 8, EnumCreatureType.CREATURE, new BiomeGenBase[] {BiomeGenBase.coldTaiga, BiomeGenBase.coldTaigaHills, BiomeGenBase.iceMountains, BiomeGenBase.icePlains});
-		    EntityRegistry.addSpawn(EntityPenguin.class, (int)ConfigHandler.PenguinRate *10, 2, 8, EnumCreatureType.CREATURE, BiomeDictionary.getBiomesForType(Type.SNOWY));
+			EntityRegistry.registerGlobalEntityID(EntityPenguin.class, mobid + "Penguin", EntityRegistry.findGlobalUniqueEntityId(), 0x000000, 0xEEEEEE);
+		    EntityRegistry.addSpawn(EntityPenguin.class, (int)ConfigHandler.PenguinRate *10, 10, 11, EnumCreatureType.CREATURE, new BiomeGenBase[] {BiomeGenBase.coldTaiga, BiomeGenBase.coldTaigaHills, BiomeGenBase.iceMountains, BiomeGenBase.icePlains});
+		    EntityRegistry.addSpawn(EntityPenguin.class, (int)ConfigHandler.PenguinRate *10, 10, 11, EnumCreatureType.CREATURE, BiomeDictionary.getBiomesForType(Type.SNOWY));
 		}
 	}
 }

@@ -47,8 +47,13 @@ public class RenderPenguin extends RenderLiving
     }
 
 	private static final ResourceLocation Penguintexture = new ResourceLocation(LotsOMobs.modid, "LotsOMobs/Mobs/Penguin.png");
+	private static final ResourceLocation Penguintexture2 = new ResourceLocation(LotsOMobs.modid, "LotsOMobs/Mobs/PenguinBaby.png");
 	 protected ResourceLocation func_110872_a(EntityPenguin par1Entity)
 	    {
+		 if(par1Entity.isChild())
+		 {
+			 return Penguintexture2;
+		 }
 	        return Penguintexture;
 	    }
 	 

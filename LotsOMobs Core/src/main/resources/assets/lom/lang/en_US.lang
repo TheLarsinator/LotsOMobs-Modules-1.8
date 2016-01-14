@@ -43,6 +43,7 @@ entity.lom_Bear.name=Bear
 entity.lom_PolarBear.name=Polar Bear
 entity.lom_PolarFox.name=Polar Fox
 entity.lom_Fox.name=Fox
+entity.lom_Penguin.name=Penguin
 
 
 //CreativeTabs

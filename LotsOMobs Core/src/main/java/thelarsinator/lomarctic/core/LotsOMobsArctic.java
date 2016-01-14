@@ -8,7 +8,7 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import thelarsinator.lomarctic.init.LotsOMobsArcticMobs;
 import thelarsinator.lomarctic.init.LotsOMobsArcticRecipes;
 
-@Mod (modid = "lomarc", name = "LotsOMobsArctic", version = "1.8-1.0", dependencies = "required-after:lom")
+@Mod (modid = "lomarc", name = "LotsOMobsArctic", version = "1.8-1.1", dependencies = "required-after:lom")
 public class LotsOMobsArctic
 {
 	public static String modid = "lomarc";	
