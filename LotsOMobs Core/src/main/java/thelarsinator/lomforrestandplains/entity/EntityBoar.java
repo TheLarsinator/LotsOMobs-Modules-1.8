@@ -1,5 +1,6 @@
 package thelarsinator.lomforrestandplains.entity;
 
+import net.minecraft.entity.EntityAgeable;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.EntityAIControlledByPlayer;
 import net.minecraft.entity.ai.EntityAIFollowParent;
@@ -76,5 +77,10 @@ public class EntityBoar extends EntityPig
         {
             this.dropItem(Items.saddle, 1);
         }
+    }
+    
+    public EntityBoar createChild(EntityAgeable ageable)
+    {
+        return new EntityBoar(this.worldObj);
     }
 }

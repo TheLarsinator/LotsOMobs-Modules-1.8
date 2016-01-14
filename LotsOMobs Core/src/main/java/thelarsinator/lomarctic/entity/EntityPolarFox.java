@@ -1,7 +1,10 @@
 package thelarsinator.lomarctic.entity;
 
+import net.minecraft.entity.EntityAgeable;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.SharedMonsterAttributes;
+import net.minecraft.entity.ai.EntityAIAttackOnCollide;
+import net.minecraft.entity.ai.EntityAINearestAttackableTarget;
 import net.minecraft.entity.passive.EntityWolf;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
@@ -13,8 +16,11 @@ import net.minecraft.world.World;
 public class EntityPolarFox extends EntityWolf
 {
 
-	public EntityPolarFox(World worldIn) {
+	public EntityPolarFox(World worldIn) 
+	{
 		super(worldIn);
+        this.tasks.addTask(2, new EntityAIAttackOnCollide(this, EntityPenguin.class, 1.0D, false));
+        this.targetTasks.addTask(2, new EntityAINearestAttackableTarget(this, EntityPenguin.class, true));
 
 	}
 
@@ -37,7 +43,7 @@ public class EntityPolarFox extends EntityWolf
         }
 
         //this.getAttributeMap().registerAttribute(SharedMonsterAttributes.attackDamage);
-        this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setBaseValue(1.5D);
+        this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setBaseValue(.5D);
     }
     
     /**
@@ -83,5 +89,19 @@ public class EntityPolarFox extends EntityWolf
         }
 
         return super.interact(player);
+    }
+    
+    public EntityPolarFox createChild(EntityAgeable ageable)
+    {
+        EntityPolarFox entityPolarFox = new EntityPolarFox(this.worldObj);
+        String s = this.getOwnerId();
+
+        if (s != null && s.trim().length() > 0)
+        {
+            entityPolarFox.setOwnerId(s);
+            entityPolarFox.setTamed(true);
+        }
+
+        return entityPolarFox;
     }
 }
