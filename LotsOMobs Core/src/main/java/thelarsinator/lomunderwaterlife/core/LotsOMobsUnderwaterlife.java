@@ -12,7 +12,7 @@ import thelarsinator.lomunderwaterlife.init.LotsOMobsUnderwaterlifeRecipes;
 public class LotsOMobsUnderwaterlife
 {
 	public static String modid = "lomuwl";	
-	@SidedProxy(clientSide = "thelarsinator.lomunderwaterlife.core.LotsOMobsUnderwaterlifeClient", serverSide = "thelarsinator.lomUnderwaterlife.core.LotsOMobsUnderwaterlifeProxy")
+	@SidedProxy(clientSide = "thelarsinator.lomunderwaterlife.core.LotsOMobsUnderwaterlifeClient", serverSide = "thelarsinator.lomunderwaterlife.core.LotsOMobsUnderwaterlifeProxy")
 	public static LotsOMobsUnderwaterlifeProxy proxy;
 
 	@Mod.Instance("lomuwl")

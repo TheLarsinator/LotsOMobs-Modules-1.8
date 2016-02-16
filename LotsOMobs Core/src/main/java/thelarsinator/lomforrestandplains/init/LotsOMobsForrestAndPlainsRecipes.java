@@ -5,6 +5,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import static thelarsinator.lomcore.init.LotsOMobsItems.*;
 
+
 public class LotsOMobsForrestAndPlainsRecipes 
 {
 	public static void RecipeBook()

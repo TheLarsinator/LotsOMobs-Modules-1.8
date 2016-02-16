@@ -22,7 +22,6 @@ public class LotsOMobsForrestAndPlains
 	@Mod.EventHandler
 	public void preInit(FMLPreInitializationEvent event)
 	{    
-
    //  	LotsOMobsBlocks.Init();
    //  	LotsOMobsBiomes.Init();
     // 	LotsOMobsAchievementsBook.Init();
